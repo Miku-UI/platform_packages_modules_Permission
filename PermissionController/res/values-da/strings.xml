@@ -78,7 +78,7 @@
     <string name="never_ask_again" msgid="4728762438198560329">"Spørg ikke igen"</string>
     <string name="no_permissions" msgid="3881676756371148563">"Ingen tilladelser"</string>
     <string name="additional_permissions" msgid="5801285469338873430">"Yderligere tilladelser"</string>
-    <string name="app_permissions_info_button_label" msgid="7633312050729974623">"Åbn appinfo"</string>
+    <string name="app_permissions_info_button_label" msgid="7633312050729974623">"Åbn appoplysninger"</string>
     <string name="additional_permissions_more" msgid="5681220714755304407">"{count,plural, =1{# anden}one{# more}other{# andre}}"</string>
     <string name="old_sdk_deny_warning" msgid="2382236998845153919">"Denne app er udviklet til en ældre version af Android. Hvis du ikke giver den tilladelse, vil den muligvis ikke længere virke efter hensigten."</string>
     <string name="storage_supergroup_warning_allow" msgid="103093462784523190">"Denne app er udviklet til en ældre version af Android. Med denne tilladelse giver du adgang til alt lagerindhold (bl.a. billeder, videoer, musik, lyd og andre filer)."</string>
@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"Standardapp for digital assistent"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"App for digital assistent"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"Assistanceapps kan hjælpe dig på baggrund af oplysningerne på den aktuelle skærm. Nogle apps understøtter både startertjenester og tjenester til indtaling for at give dig integreret assistance."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"Anbefalet af <xliff:g id="OEM_NAME">%s</xliff:g>"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"Standardapp til browsing"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"Browserapp"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"Apps, der giver dig adgang til internettet og viser links, som du trykker på"</string>
@@ -403,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"Vil du angive <xliff:g id="APP_NAME">%1$s</xliff:g> som din standardapp til navigation?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"Der kræves ingen tilladelser"</string>
     <string name="role_watch_description" msgid="267003778693177779">"<xliff:g id="APP_NAME">%1$s</xliff:g> får tilladelse til at interagere med dine notifikationer og får adgang til dine tilladelser for Opkald, Sms, Kontakter og Kalender."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"<xliff:g id="APP_NAME">%1$s</xliff:g> får tilladelse til at interagere med dine notifikationer og streame dine apps til forbundne enheder."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"Denne tjeneste deler dine billeder, medier og notifikationer fra din telefon til andre enheder."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"Standardapp til notetagning"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"App til notetagning"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"Apps, som giver dig mulighed for at tage noter på din enhed"</string>
@@ -440,7 +439,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Åbning af links"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"Standard til arbejde"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"Standard for privat område"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"Optimeret til enheden"</string>
     <string name="default_app_others" msgid="7793029848126079876">"Andre"</string>
     <string name="default_app_none" msgid="9084592086808194457">"Ingen"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(Systemstandard)"</string>
@@ -574,10 +572,10 @@
     <string name="automotive_required_app_summary" msgid="6514902316658090465">"Bilproducenten kræver denne app"</string>
     <string name="safety_center_dashboard_page_title" msgid="2810774008694315854">"Sikkerhed og privatliv"</string>
     <string name="safety_center_rescan_button" msgid="4517514567809409596">"Scan enhed"</string>
-    <string name="safety_center_issue_card_dismiss_button" msgid="5113965506144222402">"Afvis"</string>
+    <string name="safety_center_issue_card_dismiss_button" msgid="5113965506144222402">"Luk"</string>
     <string name="safety_center_issue_card_dismiss_confirmation_title" msgid="2734809473425036382">"Vil du afvise denne underretning?"</string>
     <string name="safety_center_issue_card_dismiss_confirmation_message" msgid="3775418736671093563">"Du kan altid gennemgå dine sikkerheds- og privatlivsindstillinger for at tilføje mere beskyttelse"</string>
-    <string name="safety_center_issue_card_confirm_dismiss_button" msgid="5884137843083634556">"Afvis"</string>
+    <string name="safety_center_issue_card_confirm_dismiss_button" msgid="5884137843083634556">"Luk"</string>
     <string name="safety_center_issue_card_cancel_dismiss_button" msgid="2874578798877712346">"Annuller"</string>
     <string name="safety_center_entries_category_title" msgid="34356964062813115">"Indstillinger"</string>
     <string name="safety_status_preference_title_and_summary_content_description" msgid="3511373256505058464">"Status for sikkerhed og privatliv. <xliff:g id="OVERALL_SAFETY_STATUS">%1$s</xliff:g>. <xliff:g id="SUMMARY_OF_DEVICE_STATUS">%2$s</xliff:g>"</string>
@@ -587,8 +585,8 @@
     <string name="safety_privacy_qs_tile_subtitle" msgid="3621544532041936749">"Tjek status"</string>
     <string name="privacy_controls_qs" msgid="5780144882040591169">"Dine privatlivsindstillinger"</string>
     <string name="security_settings_button_label_qs" msgid="8280343822465962330">"Flere indstillinger"</string>
-    <string name="camera_toggle_label_qs" msgid="3880261453066157285">"Kameraadgang"</string>
-    <string name="microphone_toggle_label_qs" msgid="8132912469813396552">"Mikrofonadgang"</string>
+    <string name="camera_toggle_label_qs" msgid="3880261453066157285">"Kamera­adgang"</string>
+    <string name="microphone_toggle_label_qs" msgid="8132912469813396552">"Mikrofon­adgang"</string>
     <string name="permissions_removed_qs" msgid="8957319130625294572">"Tilladelsen blev fjernet"</string>
     <string name="camera_usage_qs" msgid="4394233566086665994">"Se seneste kamerabrug"</string>
     <string name="microphone_usage_qs" msgid="8527666682168170417">"Se seneste mikrofonbrug"</string>
@@ -629,8 +627,8 @@
     <string name="safety_center_background_location_access_revoked" msgid="6972274943343442213">"Adgangen er ændret"</string>
     <string name="safety_center_view_recent_location_access" msgid="3524391299490678243">"Se seneste brug af lokation"</string>
     <string name="privacy_controls_title" msgid="7605929972256835199">"Privatlivsindstillinger"</string>
-    <string name="camera_toggle_title" msgid="1251201397431837666">"Kameraadgang"</string>
-    <string name="mic_toggle_title" msgid="2649991093496110162">"Mikrofonadgang"</string>
+    <string name="camera_toggle_title" msgid="1251201397431837666">"Kamera­adgang"</string>
+    <string name="mic_toggle_title" msgid="2649991093496110162">"Mikrofon­adgang"</string>
     <string name="perm_toggle_description" msgid="7801326363741451379">"For apps og tjenester"</string>
     <string name="mic_toggle_description" msgid="9163104307990677157">"For apps og tjenester: Hvis denne indstilling er deaktiveret, deles mikrofondata muligvis stadig, når du ringer til et alarmnummer."</string>
     <string name="location_settings_subtitle" msgid="2328360561197430695">"Se de apps og tjenester, der har adgang til lokation"</string>
@@ -703,4 +701,22 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"Tjek din telefon"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"Der kunne ikke oprettes forbindelse til telefonen"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"Vil du prøve igen?"</string>
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"Agenter"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"Agenter, der kan tilgå oplysninger eller foretage handlinger i apps"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"Agenter"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"Administrer agenters adgang på denne enhed"</string>
+    <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"Der er ingen tilgængelige agentapps"</string>
+    <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"Installer en agentapp på din enhed for at aktivere denne funktion"</string>
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"Appadgang"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"Apps og indstillinger, som denne agent kan tilgå for at hente oplysninger og foretage handlinger for dig"</string>
+    <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"Der er ingen tilgængelige apps med adgang til <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"System"</string>
+    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Apps"</string>
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"Adgang for repræsentant"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"Repræsentanter, der kan tilgå oplysninger og foretage handlinger for dig i denne app"</string>
+    <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Enhedsindstillinger"</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Må <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> være agent for <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Denne agent vil kunne tilgå <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> for at hente oplysninger og foretage handlinger for dig"</string>
+    <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Tillad"</string>
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Tillad ikke"</string>
 </resources>

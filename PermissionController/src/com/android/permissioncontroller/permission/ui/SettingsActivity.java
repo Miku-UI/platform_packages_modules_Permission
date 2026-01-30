@@ -16,17 +16,42 @@
 
 package com.android.permissioncontroller.permission.ui;
 
+import android.os.Bundle;
+
+import androidx.annotation.Nullable;
+
+import com.android.modules.utils.build.SdkLevel;
 import com.android.permissioncontroller.DeviceUtils;
+import com.android.permissioncontroller.R;
+import com.android.settingslib.collapsingtoolbar.EdgeToEdgeUtils;
 import com.android.settingslib.collapsingtoolbar.SettingsTransitionActivity;
+import com.android.settingslib.widget.ExpressiveDesignEnabledProvider;
+import com.android.settingslib.widget.theme.flags.Flags;
 
 /**
  * Parent activity that supports transitions
  */
-public class SettingsActivity extends SettingsTransitionActivity {
+public class SettingsActivity extends SettingsTransitionActivity implements
+        ExpressiveDesignEnabledProvider {
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        if (SdkLevel.isAtLeastV()) {
+            EdgeToEdgeUtils.enable(this);
+        }
+
+        super.onCreate(savedInstanceState);
+    }
+
     @Override
     protected boolean isSettingsTransitionEnabled() {
         return super.isSettingsTransitionEnabled() && !(DeviceUtils.isAuto(this)
                 || DeviceUtils.isTelevision(this) || DeviceUtils.isWear(this));
     }
 
+    @Override
+    public boolean isExpressiveDesignEnabled() {
+        return SdkLevel.isAtLeastB() && DeviceUtils.isHandheld()
+                && Flags.isExpressiveDesignEnabled() && getResources().getBoolean(
+                R.bool.config_enableExpressiveDesignInPermissionSettings);
+    }
 }

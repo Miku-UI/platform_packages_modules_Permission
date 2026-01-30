@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"預設數位助理應用程式"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"數位助理應用程式"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"小幫手應用程式可根據當下的螢幕內容提供協助。某些應用程式同時支援啟動器和語音輸入服務，服務更完善。"</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"「<xliff:g id="OEM_NAME">%s</xliff:g>」推薦"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"預設瀏覽器應用程式"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"瀏覽器應用程式"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"透過這類應用程式你可以連上網際網路和顯示你輕觸的連結"</string>
@@ -403,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"要將「<xliff:g id="APP_NAME">%1$s</xliff:g>」設為預設的導航應用程式嗎？"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"無需任何權限"</string>
     <string name="role_watch_description" msgid="267003778693177779">"「<xliff:g id="APP_NAME">%1$s</xliff:g>」將可存取通知、電話、簡訊、聯絡人和日曆資料。"</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"「<xliff:g id="APP_NAME">%1$s</xliff:g>」將可存取通知，並能夠在已連結的裝置上串流播放應用程式內容。"</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"這項服務會將你手機中的相片、媒體和通知與其他裝置共用。"</string>
     <string name="role_notes_label" msgid="7451627001058089536">"預設的記事應用程式"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"記事應用程式"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"可在裝置上記事的應用程式"</string>
@@ -440,7 +439,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"開啟連結"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"預設的工作應用程式"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"私人空間的預設應用程式"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"已針對裝置最佳化"</string>
     <string name="default_app_others" msgid="7793029848126079876">"其他"</string>
     <string name="default_app_none" msgid="9084592086808194457">"無"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(系統預設)"</string>
@@ -489,7 +487,7 @@
     <string name="permgroupupgraderequestdetail_nearby_devices" msgid="6877531270654738614">"要允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;尋找、連結及判斷附近裝置的相對位置嗎？"<annotation id="link">"請前往「設定」授予權限。"</annotation></string>
     <string name="permgrouprequest_fineupgrade" msgid="2334242928821697672">"要將「<xliff:g id="APP_NAME">&lt;b&gt;%1$s&lt;/b&gt;</xliff:g>」可以存取的定位資訊從「大概位置」改為「精確位置」嗎？"</string>
     <string name="permgrouprequest_device_aware_fineupgrade" msgid="4453775952305587571">"要將「<xliff:g id="APP_NAME">&lt;b&gt;%1$s&lt;/b&gt;</xliff:g>」在「<xliff:g id="DEVICE_NAME">%2$s</xliff:g>」&lt;b&gt;&lt;/b&gt;的位置資訊存取權從大概變更為精確嗎？"</string>
-    <string name="permgrouprequest_coarselocation" msgid="7244605063736425232">"要允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;存取這部裝置的大概位置資訊嗎？"</string>
+    <string name="permgrouprequest_coarselocation" msgid="7244605063736425232">"要允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;存取這部裝置的大概位置嗎？"</string>
     <string name="permgrouprequest_device_aware_coarselocation" msgid="8367540370912066757">"要允許「<xliff:g id="APP_NAME">%1$s</xliff:g>」&lt;b&gt;&lt;/b&gt;存取「<xliff:g id="DEVICE_NAME">%2$s</xliff:g>」&lt;b&gt;&lt;/b&gt;的大概位置資訊嗎？"</string>
     <string name="permgrouprequest_finelocation_imagetext" msgid="1313062433398914334">"精確"</string>
     <string name="permgrouprequest_coarselocation_imagetext" msgid="8650605041483025297">"大概"</string>
@@ -703,4 +701,22 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"查看手機"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"無法連上手機"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"要重試嗎？"</string>
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"代理"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"代理可以在應用程式中存取資訊或執行操作"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"代理"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"管理這部裝置上的代理存取權"</string>
+    <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"沒有可用的代理應用程式"</string>
+    <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"在裝置上安裝代理應用程式，即可啟用這項功能"</string>
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"應用程式存取權"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"這個代理可在應用程式和設定中存取資訊，並代表你執行操作"</string>
+    <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"沒有「<xliff:g id="APP_NAME">%1$s</xliff:g>」可存取的應用程式"</string>
+    <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"系統"</string>
+    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"應用程式"</string>
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"代理存取權"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"代理可以存取資訊，並在這個應用程式中代表你執行操作"</string>
+    <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"裝置設定"</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"要將「<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>」設為「<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>」的代理嗎？"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"這個代理將可存取「<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>」取得資訊，並代表你執行操作"</string>
+    <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"允許"</string>
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"不允許"</string>
 </resources>

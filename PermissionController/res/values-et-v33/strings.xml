@@ -19,7 +19,7 @@
     <string name="role_dialer_request_description" msgid="6188305064871543419">"Sellel rakendusel lubatakse teile märguandeid saata ja sellele antakse juurdepääs teie kaamerale, kontaktidele, mikrofonile, telefonile ja SMS-idele"</string>
     <string name="role_sms_request_description" msgid="1506966389698625395">"Sellel rakendusel lubatakse teile märguandeid saata ja sellele antakse juurdepääs teie kaamerale, kontaktidele, failidele, mikrofonile, telefonile ja SMS-idele"</string>
     <string name="permission_description_summary_storage" msgid="1917071243213043858">"Selle loaga rakendused pääsevad selles seadmes juurde kõikidele failidele"</string>
-    <string name="work_policy_title" msgid="832967780713677409">"Teie tööeeskirjade teave"</string>
+    <string name="work_policy_title" msgid="832967780713677409">"Teie tööreeglite teave"</string>
     <string name="work_policy_summary" msgid="3886113358084963931">"Seadeid haldab teie IT-administraator"</string>
     <string name="safety_center_entry_group_expand_action" msgid="5358289574941779652">"Laienda ja kuva loend"</string>
     <string name="safety_center_entry_group_collapse_action" msgid="1525710152244405656">"Ahenda loend ja peida seaded"</string>
@@ -29,6 +29,7 @@
     <string name="safety_center_entry_content_description" msgid="3639565652938224321">"<xliff:g id="ENTRY_ITEM_TITLE">%1$s</xliff:g>. <xliff:g id="ENTRY_ITEM_SUMMARY">%2$s</xliff:g>"</string>
     <string name="safety_center_more_issues_card_title" msgid="7425844746197493312">"Rohkem teavitusi"</string>
     <string name="safety_center_dismissed_issues_card_title" msgid="2340129842725145733">"Hoiatused, millest on loobutud"</string>
+    <string name="safety_center_expressive_more_issues_collapse_title" msgid="4022284109267834224">"Sule"</string>
     <string name="safety_center_more_issues_card_expand_action" msgid="7109451851052272946">"{count,plural, =1{Laiendage ja vaadake veel ühte hoiatust}other{Laiendage ja vaadake veel # hoiatust}}"</string>
     <string name="safety_center_more_issues_card_collapse_action" msgid="7485597582198474637">"Ahenda"</string>
     <string name="safety_center_issue_card_prefix_content_description" msgid="1447445289637043544">"Hoiatus. <xliff:g id="ISSUE_CARD_TITLE">%1$s</xliff:g>"</string>

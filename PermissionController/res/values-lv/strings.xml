@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"Noklusēj. digitālais asistents"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"Digitālā asistenta lietotne"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"Izmantojot palīga lietotnes, varat iegūt palīdzību, pamatojoties uz ekrānā redzamo informāciju. Dažās lietotnēs tiek atbalstītas gan palaišanas programmas, gan balss ievades pakalpojumi, lai nodrošinātu integrētu palīdzību."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"<xliff:g id="OEM_NAME">%s</xliff:g> iesaka"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"Noklusējuma pārlūka lietotne"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"Pārlūka lietotne"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"Lietotnes, kas sniedz jums piekļuvi internetam un atver saites, kam jūs pieskaraties"</string>
@@ -403,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"Vai vēlaties iestatīt lietotni <xliff:g id="APP_NAME">%1$s</xliff:g> kā noklusējuma navigācijas lietotni?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"Atļaujas nav nepieciešamas"</string>
     <string name="role_watch_description" msgid="267003778693177779">"Lietotnei <xliff:g id="APP_NAME">%1$s</xliff:g> tiks atļauts mijiedarboties ar jūsu paziņojumiem un piekļūt šādām atļaujām: Tālrunis, Īsziņas, Kontaktpersonas un Kalendārs."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"Lietotnei <xliff:g id="APP_NAME">%1$s</xliff:g> tiks atļauts mijiedarboties ar jūsu paziņojumiem un straumēt jūsu lietotņu saturu uz pievienoto ierīci."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"Izmantojot šo pakalpojumu, jūsu tālruņa fotoattēli, multivides saturs un paziņojumi tiek kopīgoti ar citām ierīcēm."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"Noklusējuma piezīmju lietotne"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"Piezīmju lietotne"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"Lietotnes, kas ļauj ierīcē veikt piezīmes"</string>
@@ -440,7 +439,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Saišu atvēršana"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"Noklusējuma iestatījums darbam"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"Noklusējums privātajai telpai"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"Optimizētas ierīcei"</string>
     <string name="default_app_others" msgid="7793029848126079876">"Citas"</string>
     <string name="default_app_none" msgid="9084592086808194457">"Nav"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(Sistēmas noklusējums)"</string>
@@ -703,4 +701,22 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"Pārbaudiet tālruni"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"Nevarēja sasniegt jūsu tālruni."</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"Vai mēģināt vēlreiz?"</string>
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"Aģenti"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"Aģenti, kas var piekļūt informācijai vai veikt darbības lietotnēs"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"Aģenti"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"Pārvaldīt piekļuvi aģentiem šajā ierīcē"</string>
+    <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"Nav pieejama neviena aģenta lietotne"</string>
+    <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"Lai iespējotu šo funkciju, ierīcē instalējiet aģenta lietotni"</string>
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"Piekļuve lietotnēm"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"Lietotnes un iestatījumi, kam šis aģents var piekļūt, lai iegūtu informāciju un veiktu darbības jūsu vārdā"</string>
+    <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"Nav pieejama neviena lietotne, kas varētu piekļūt lietotnei <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"Sistēma"</string>
+    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Lietotnes"</string>
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"Aģenta piekļuve"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"Aģenti, kas var piekļūt informācijai un veikt darbības jūsu vārdā šajā lietotnē"</string>
+    <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Ierīces iestatījumi"</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Vai atļaut lietotnei <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> būt lietotnes <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> aģentam?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Šis aģents varēs piekļūt lietotnei <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>, lai iegūtu informāciju un veiktu darbības jūsu vārdā."</string>
+    <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Atļaut"</string>
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Neatļaut"</string>
 </resources>

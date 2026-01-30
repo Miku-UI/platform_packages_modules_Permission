@@ -128,7 +128,7 @@
     <string name="permission_usage_title" msgid="1568233336351734538">"Dashibodi ya faragha"</string>
     <string name="auto_permission_usage_summary" msgid="7335667266743337075">"Angalia programu zilizotumia ruhusa hivi majuzi"</string>
     <string name="permission_group_usage_title" msgid="2595013198075285173">"Matumizi ya <xliff:g id="PERMGROUP">%1$s</xliff:g>"</string>
-    <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Angalia ruhusa zingine"</string>
+    <string name="perm_usage_adv_info_title" msgid="3357831829538873708">"Angalia ruhusa nyingine"</string>
     <string name="perm_usage_adv_info_summary_2_items" msgid="3702175198750127822">"<xliff:g id="PERMGROUP_0">%1$s</xliff:g>, <xliff:g id="PERMGROUP_1">%2$s</xliff:g>"</string>
     <string name="perm_usage_adv_info_summary_more_items" msgid="949055326299562218">"<xliff:g id="PERMGROUP_0">%1$s</xliff:g>, <xliff:g id="PERMGROUP_1">%2$s</xliff:g> na <xliff:g id="NUM">%3$s</xliff:g> zaidi"</string>
     <string name="permission_group_usage_subtitle_24h" msgid="5120155996322114181">"Rekodi ya wakati ambapo programu zilitumia <xliff:g id="PERMGROUP">%1$s</xliff:g> katika saa 24 zilizopita"</string>
@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"Programu msingi ya usaidizi wa kidijitali"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"Programu saidizi ya kidijitali"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"Programu za usaidizi zinaweza kukusaidia kulingana na maelezo kutoka kwenye skrini unayoangalia. Baadhi ya programu zinaweza kutumia huduma za kifungua programu na kuweka data kwa kutamka ili kukupa usaidizi jumuifu."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"Zimependekezwa na <xliff:g id="OEM_NAME">%s</xliff:g>"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"Programu kuu ya kivinjari"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"Programu ya kivinjari"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"Programu zinazokupa uwezo wa kufikia intaneti na kuonyesha viungo unavyogusa"</string>
@@ -382,7 +383,7 @@
     <string name="role_emergency_request_description" msgid="131645948770262850">"Hakuna ruhusa zinazohitajika"</string>
     <string name="role_emergency_search_keywords" msgid="1920007722599213358">"katika dharura"</string>
     <string name="role_home_label" msgid="3871847846649769412">"Programu chaguomsingi ya mwanzo"</string>
-    <string name="role_home_short_label" msgid="8544733747952272337">"Programu ya ukurasa wa mwanzo"</string>
+    <string name="role_home_short_label" msgid="8544733747952272337">"Programu ya mwanzo"</string>
     <string name="role_home_description" msgid="7997371519626556675">"Programu, zinazoitwa vifungua programu, zinazochukua nafasi ya skrini yako ya kwanza kwenye kifaa chako cha Android na kukupa uwezo wa kufikia maudhui na vipengele vya kifaa chako"</string>
     <string name="role_home_request_title" msgid="738136983453341081">"Je, ungependa kuweka <xliff:g id="APP_NAME">%1$s</xliff:g> iwe programu yako chaguomsingi ya ukurasa wa kwanza?"</string>
     <string name="role_home_request_description" msgid="2658833966716057673">"Hakuna ruhusa zinazohitajika"</string>
@@ -403,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"Je, ungependa kuweka <xliff:g id="APP_NAME">%1$s</xliff:g> iwe programu yako chaguomsingi ya maelekezo?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"Hakuna ruhusa zinazohitajika"</string>
     <string name="role_watch_description" msgid="267003778693177779">"<xliff:g id="APP_NAME">%1$s</xliff:g> itaruhusiwa kushirikiana na arifa zako na kufikia ruhusa za Simu, SMS, Anwani na Kalenda yako."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"<xliff:g id="APP_NAME">%1$s</xliff:g> itaruhusiwa kufikia arifa zako na kutiririsha programu zako kwenye kifaa kilichounganishwa."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"Huduma hii inashiriki picha, maudhui na arifa zako kutoka kwenye simu yako hadi vifaa vingine."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"Programu chaguomsingi ya madokezo"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"Programu ya madokezo"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"Programu zinazokuruhusu uandike madokezo kwenye kifaa chako"</string>
@@ -440,7 +439,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Kufungua viungo"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"Programu chaguomsingi kazini"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"Programu chaguomsingi za sehemu ya faragha"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"Zilizoboreshwa ili kufaa kifaa chako"</string>
     <string name="default_app_others" msgid="7793029848126079876">"Nyingine"</string>
     <string name="default_app_none" msgid="9084592086808194457">"Hakuna"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(Programu chaguomsingi ya mfumo)"</string>
@@ -562,7 +560,7 @@
     <string name="blocked_camera_title" msgid="1128510551791284384">"Kamera ya kifaa imezuiwa"</string>
     <string name="blocked_microphone_title" msgid="1631517143648232585">"Maikrofoni ya kifaa imezuiwa"</string>
     <string name="blocked_location_title" msgid="2005608279812892383">"Utambuzi wa mahali kifaa kilipo umezimwa"</string>
-    <string name="blocked_sensor_summary" msgid="4443707628305027375">"Kwa ajili ya programu na huduma"</string>
+    <string name="blocked_sensor_summary" msgid="4443707628305027375">"Kwa programu na huduma"</string>
     <string name="blocked_mic_summary" msgid="8960466941528458347">"Huenda bado data ya maikrofoni ikashirikiwa unapopigia namba ya dharura."</string>
     <string name="blocked_sensor_button_label" msgid="6742092634984289658">"Badilisha"</string>
     <string name="automotive_blocked_camera_title" msgid="6142362431548829416">"Idhini ya kufikia kamera imezimwa"</string>
@@ -662,7 +660,7 @@
     <string name="data_sharing_updates_title" msgid="7996933386875213859">"Masasisho ya kushiriki data ya mahali"</string>
     <string name="data_sharing_updates_summary" msgid="764113985772233889">"Kagua programu zilizobadilisha jinsi zinavyoweza kushiriki data ya mahali ulipo"</string>
     <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"Programu hizi zimebadilisha jinsi zinavyoweza kushiriki data ya mahali ulipo. Huenda zilikuwa haziishiriki hapo awali au sasa zinaweza kuishiriki kwa madhumuni ya utangazaji au uuzaji."</string>
-    <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Wasanidi wa programu hizi wametoa maelezo kuhusu mbinu zao za kushiriki data kwenye duka la programu. Wanaweza kuyasasisha kadiri muda unavyosonga.\n\nMbinu za kushiriki data zinaweza kutofautiana kulingana na toleo la programu, matumizi, eneo na umri wako."</string>
+    <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Wasanidi wa programu hizi wametoa maelezo kuhusu mbinu zao za kuruhusu ufikiaji wa data kwenye duka la programu. Wanaweza kuyasasisha kadiri muda unavyosonga.\n\nMbinu za kuruhusu ufikiaji wa data zinaweza kutofautiana kulingana na toleo la programu, matumizi, eneo na umri wako."</string>
     <string name="learn_about_data_sharing" msgid="4200480587079488045">"Pata maelezo kuhusu kushiriki data"</string>
     <string name="shares_location_with_third_parties" msgid="2278051743742057767">"Sasa data ya mahali ulipo inashirikiwa na wengine"</string>
     <string name="shares_location_with_third_parties_for_advertising" msgid="1918588064014480513">"Sasa data ya mahali ulipo inashirikiwa na wengine kwa madhumuni ya utangazaji au uuzaji"</string>
@@ -682,7 +680,7 @@
     <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"Mipangilio hii imezuiwa ili kulinda kifaa na data yako.<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
 
-</xliff:g>Walaghai wanaweza kujaribu kuweka programu hatari kwenye kifaa chako kwa kukuomba uweke programu zisizojulikana kutoka chanzo kigeni."</string>
+</xliff:g>Walaghai wanaweza kujaribu kuweka programu hatari kwenye kifaa chako kwa kukuomba uweke programu zisizojulikana kutoka chanzo geni."</string>
     <string name="enhanced_confirmation_phone_state_dialog_a11y_desc" msgid="6567523001053288057">"<xliff:g id="EMPTY_LINE">
 
 </xliff:g>Walaghai wanaweza kujaribu kudhibiti kifaa chako kwa kukuomba uruhusu programu ifikie vipengele vya ufikivu."</string>
@@ -703,4 +701,22 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"Angalia simu yako"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"Imeshindwa kufikia simu yako"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"Ungependa kujaribu tena?"</string>
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"Mifumo tekelezi"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"Mifumo tekelezi inayoweza kufikia maelezo na kutekeleza vitendo kwenye programu"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"Mifumo tekelezi"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"Dhibiti ruhusa za ufikiaji za mifumo tekelezi kwenye kifaa hiki"</string>
+    <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"Hakuna programu saidizi zinazopatikana"</string>
+    <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"Weka programu saidizi kwenye kifaa chako ili uwashe kipengele hiki"</string>
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"Ufikiaji wa programu"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"Programu na mipangilio ambayo mfumo huu tekelezi unaweza kufikia ili kupata maelezo na kutekeleza vitendo kwa niaba yako"</string>
+    <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"Hakuna programu ambazo <xliff:g id="APP_NAME">%1$s</xliff:g> inaweza kufikia"</string>
+    <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"Mfumo"</string>
+    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Programu"</string>
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"Ruhusa za ufikiaji za mifumo tekelezi"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"Mifumo tekelezi inayoweza kufikia maelezo na kutekeleza vitendo kwa niaba yako katika programu hii"</string>
+    <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Mipangilio ya Kifaa"</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Ungependa <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> kuwa kisaidizi cha <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Kisaidizi hiki kitaweza kufikia <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> ili kupata taarifa na kuchukua hatua kwa niaba yako"</string>
+    <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Ruhusu"</string>
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Usiruhusu"</string>
 </resources>

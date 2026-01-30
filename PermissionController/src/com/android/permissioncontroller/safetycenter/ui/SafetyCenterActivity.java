@@ -34,6 +34,7 @@ import static java.util.Objects.requireNonNull;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.safetycenter.SafetyCenterManager;
@@ -62,6 +63,7 @@ import com.android.permissioncontroller.permission.utils.Utils;
 import com.android.permissioncontroller.safetycenter.ui.model.PrivacyControlsViewModel.Pref;
 import com.android.settingslib.activityembedding.ActivityEmbeddingUtils;
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
+import com.android.settingslib.widget.ExpressiveDesignEnabledProvider;
 import com.android.settingslib.widget.SettingsThemeHelper;
 
 import java.util.List;
@@ -69,7 +71,8 @@ import java.util.Objects;
 
 /** Entry-point activity for SafetyCenter. */
 @RequiresApi(TIRAMISU)
-public final class SafetyCenterActivity extends CollapsingToolbarBaseActivity {
+public final class SafetyCenterActivity extends CollapsingToolbarBaseActivity
+        implements ExpressiveDesignEnabledProvider {
 
     private static final String TAG = SafetyCenterActivity.class.getSimpleName();
     private static final String PRIVACY_CONTROLS_ACTION = "android.settings.PRIVACY_CONTROLS";
@@ -94,12 +97,6 @@ public final class SafetyCenterActivity extends CollapsingToolbarBaseActivity {
 
         if (maybeRedirectIntoTwoPaneSettings()) {
             return;
-        }
-
-        if (SettingsThemeHelper.isExpressiveTheme(this)) {
-            // Setting a theme programmatically causes standard preferences to display weirdly.
-            // See b/377519324.
-            setTheme(R.style.Theme_SafetyCenterExpressive);
         }
 
         Fragment frag;
@@ -159,6 +156,20 @@ public final class SafetyCenterActivity extends CollapsingToolbarBaseActivity {
                                         });
                             }
                         });
+    }
+
+    @Override
+    public Resources.Theme getTheme() {
+        Resources.Theme theme = super.getTheme();
+        theme.applyStyle(R.style.ThemeOverlay_SafetyCenterColors_DayNight, /* force= */ true);
+
+        if (SettingsThemeHelper.isExpressiveTheme(this)) {
+            theme.applyStyle(R.style.ThemeOverlay_SafetyCenter_Expressive, /* force= */ true);
+            theme.applyStyle(
+                    R.style.ThemeOverlay_SafetyCenter_ExpressiveButtons, /* force= */ true);
+            theme.applyStyle(R.style.ThemeOverlay_SafetyCenter_ExpressiveColors, /* force= */ true);
+        }
+        return theme;
     }
 
     @Override
@@ -361,5 +372,11 @@ public final class SafetyCenterActivity extends CollapsingToolbarBaseActivity {
             }
         }
         return null;
+    }
+
+    @Override
+    public boolean isExpressiveDesignEnabled() {
+        return SettingsThemeHelper.isExpressiveDesignEnabled()
+                && getResources().getBoolean(R.bool.config_enableExpressiveDesignInSafetyCenter);
     }
 }

@@ -27,8 +27,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.android.permissioncontroller.DeviceUtils;
-import com.android.permissioncontroller.R;
-import com.android.permissioncontroller.role.ui.SettingsActivity;
+import com.android.permissioncontroller.common.ui.SettingsActivity;
 import com.android.permissioncontroller.role.ui.auto.AutoSpecialAppAccessFragment;
 import com.android.permissioncontroller.role.ui.specialappaccess.handheld.HandheldSpecialAppAccessFragment;
 import com.android.role.controller.model.Role;
@@ -56,11 +55,6 @@ public class SpecialAppAccessActivity extends SettingsActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        if (DeviceUtils.isAuto(this)) {
-            // Automotive relies on a different theme. Apply before calling super so that
-            // fragments are restored properly on configuration changes.
-            setTheme(R.style.CarSettings);
-        }
         super.onCreate(savedInstanceState);
 
         String roleName = getIntent().getStringExtra(Intent.EXTRA_ROLE_NAME);

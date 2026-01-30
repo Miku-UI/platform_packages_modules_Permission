@@ -649,6 +649,9 @@
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
         <item name="android:background">?android:attr/selectableItemBackground</item>
+        <!-- Workaround for b/427305183 to restore the non-clipping behavior on V. -->
+        <item name="android:clipChildren">false</item>
+        <item name="android:clipToPadding">false</item>
     </style>
 
     <style name="AppPermissionLocationAccuracyText">
@@ -1467,7 +1470,8 @@
         <item name="android:contentDescription">@null</item>
     </style>
 
-    <style name="EnhancedConfirmationDialogTitle" parent="@android:style/TextAppearance.Material.Headline">
+    <style name="EnhancedConfirmationDialogTitle"
+           parent="@android:style/TextAppearance.Material.Headline">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">16dp</item>
@@ -1485,7 +1489,8 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">vertical</item>
     </style>
-    <style name="EnhancedConfirmationDialogDesc" parent="@android:style/TextAppearance.Material.Body1">
+    <style name="EnhancedConfirmationDialogDesc"
+           parent="@android:style/TextAppearance.Material.Body1">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">start</item>

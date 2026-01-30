@@ -200,7 +200,7 @@
     <string name="app_permission_title" msgid="2090897901051370711">"Leidimas: <xliff:g id="PERM">%1$s</xliff:g>"</string>
     <string name="app_permission_header" msgid="2951363137032603806">"<xliff:g id="PERM">%1$s</xliff:g>: šios programos prieiga"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"<xliff:g id="PERM">%1$s</xliff:g> prieiga šiai programai „<xliff:g id="DEVICE_NAME">%2$s</xliff:g>“"</string>
-    <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"Žr. visus „<xliff:g id="APP">%1$s</xliff:g>“ leidimus"</string>
+    <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"Žr. visus leidimus: <xliff:g id="APP">%1$s</xliff:g>"</string>
     <string name="app_permission_footer_permission_apps_link" msgid="3941988129992794327">"Žr. visas programas, kurioms suteiktas šis leidimas"</string>
     <string name="app_permission_info_button" msgid="8973692370208562556">"Informacija"</string>
     <string name="app_permission_settings_button" msgid="4582916817451973752">"Nustatymai"</string>
@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"Numat. skaitm. pagelbiklio pr."</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"Skaitmeninio pagelbik. pr."</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"Pagalbinė programa gali padėti atsižvelgdama į peržiūrimo ekrano informaciją. Kai kurios programos palaiko tiek paleidimo priemonę, tiek įvesties balsu paslaugas, kad galėtų būti naudingos."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"Rekomenduoja „<xliff:g id="OEM_NAME">%s</xliff:g>“"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"Numatytoji naršyklės programa"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"Naršyklės programa"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"Programos, leidžiančios pasiekti internetą ir rodomas nuorodas, kurias paliečiate"</string>
@@ -403,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"Nustatyti „<xliff:g id="APP_NAME">%1$s</xliff:g>“ kaip numatytąją navigacijos programą?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"Nereikia jokių leidimų"</string>
     <string name="role_watch_description" msgid="267003778693177779">"„<xliff:g id="APP_NAME">%1$s</xliff:g>“ galės sąveikauti su pranešimų funkcija ir pasiekti telefoną, SMS, kontaktus ir kalendorių."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"„<xliff:g id="APP_NAME">%1$s</xliff:g>“ galės sąveikauti su pranešimų funkcija ir srautu perduoti programas į prijungtą įrenginį."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"Ši paslauga bendrina jūsų nuotraukas, mediją ir pranešimus iš telefono ir kitų įrenginių."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"Numatytoji užrašų programa"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"Užrašų programa"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"Programos, leidžiančios rašyti užrašus jūsų įrenginyje"</string>
@@ -440,7 +439,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Nuorodų atidarymas"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"Numatytosios darbo programos"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"Privačios erdvės numatytosios programos"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"Optimizuota pagal įrenginį"</string>
     <string name="default_app_others" msgid="7793029848126079876">"Kita"</string>
     <string name="default_app_none" msgid="9084592086808194457">"Nėra"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(Sistemos numatytoji programa)"</string>
@@ -703,4 +701,22 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"Patikrinkite telefoną"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"Nepavyksta pasiekti jūsų telefono"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"Bandyti dar kartą?"</string>
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"Tarpininkai"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"Tarpininkai, kurie gali pasiekti informaciją arba imtis veiksmų programose"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"Tarpininkai"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"Tvarkykite tarpininkų prieigą šiame įrenginyje"</string>
+    <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"Nėra pasiekiamų tarpininko programų"</string>
+    <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"Įdiekite tarpininko programą įrenginyje, kad įgalintumėte šią funkciją"</string>
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"Programos prieiga"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"Programos ir nustatymai, kuriuos šis tarpininkas gali pasiekti, kad gautų informacijos ir imtųsi veiksmų jūsų vardu"</string>
+    <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"Nėra programų, skirtų prieigai prie „<xliff:g id="APP_NAME">%1$s</xliff:g>“"</string>
+    <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"Sistema"</string>
+    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Programos"</string>
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"Tarpininko prieiga"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"Tarpininkai, galintys pasiekti informaciją ir atlikti veiksmus už jus šioje programoje"</string>
+    <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Įrenginio nustatymai"</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Leisti programai „<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>“ būti „<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>“ tarpininku?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Šis tarpininkas galės pasiekti „<xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>“, kad gautų informacijos ir imtųsi veiksmų jūsų vardu"</string>
+    <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Leisti"</string>
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Neleisti"</string>
 </resources>

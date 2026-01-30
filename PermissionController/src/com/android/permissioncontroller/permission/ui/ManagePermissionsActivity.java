@@ -19,6 +19,7 @@ package com.android.permissioncontroller.permission.ui;
 import static android.health.connect.HealthPermissions.HEALTH_PERMISSION_GROUP;
 import static android.view.WindowManager.LayoutParams.SYSTEM_FLAG_HIDE_NON_SYSTEM_OVERLAY_WINDOWS;
 
+import com.android.modules.utils.build.SdkLevel;
 import static com.android.permissioncontroller.Constants.ACTION_MANAGE_AUTO_REVOKE;
 import static com.android.permissioncontroller.Constants.EXTRA_SESSION_ID;
 import static com.android.permissioncontroller.Constants.INVALID_SESSION_ID;
@@ -27,6 +28,8 @@ import static com.android.permissioncontroller.PermissionControllerStatsLog.APP_
 import static com.android.permissioncontroller.PermissionControllerStatsLog.APP_PERMISSION_GROUPS_FRAGMENT_AUTO_REVOKE_ACTION__ACTION__OPENED_FOR_AUTO_REVOKE;
 import static com.android.permissioncontroller.PermissionControllerStatsLog.APP_PERMISSION_GROUPS_FRAGMENT_AUTO_REVOKE_ACTION__ACTION__OPENED_FROM_INTENT;
 import static com.android.permissioncontroller.PermissionControllerStatsLog.AUTO_REVOKE_NOTIFICATION_CLICKED;
+import static com.android.permissioncontroller.PermissionControllerStatsLog.PERMISSION_MANAGER_PAGE_INTERACTION;
+import static com.android.permissioncontroller.PermissionControllerStatsLog.PERMISSION_MANAGER_PAGE_INTERACTION__ACTION__PERMISSION_MANAGER_OPENED;
 import static com.android.permissioncontroller.PermissionControllerStatsLog.PERMISSION_USAGE_FRAGMENT_INTERACTION;
 import static com.android.permissioncontroller.PermissionControllerStatsLog.PERMISSION_USAGE_FRAGMENT_INTERACTION__ACTION__OPEN;
 
@@ -72,6 +75,7 @@ import com.android.permissioncontroller.permission.ui.auto.AutoUnusedAppsFragmen
 import com.android.permissioncontroller.permission.ui.auto.dashboard.AutoPermissionUsageDetailsFragment;
 import com.android.permissioncontroller.permission.ui.auto.dashboard.AutoPermissionUsageFragment;
 import com.android.permissioncontroller.permission.ui.handheld.AppPermissionGroupsFragment;
+import com.android.permissioncontroller.permission.ui.handheld.ManageCustomPermissionsFragment;
 import com.android.permissioncontroller.permission.ui.handheld.PermissionAppsFragment;
 import com.android.permissioncontroller.permission.ui.handheld.v31.PermissionDetailsWrapperFragment;
 import com.android.permissioncontroller.permission.ui.handheld.v31.PermissionUsageWrapperFragment;
@@ -85,6 +89,7 @@ import com.android.permissioncontroller.permission.ui.wear.WearUnusedAppsFragmen
 import com.android.permissioncontroller.permission.utils.KotlinUtils;
 import com.android.permissioncontroller.permission.utils.PermissionMapping;
 import com.android.permissioncontroller.permission.utils.Utils;
+import com.android.settingslib.widget.SettingsThemeHelper;
 
 import java.util.Objects;
 import java.util.Random;
@@ -154,6 +159,8 @@ public final class ManagePermissionsActivity extends SettingsActivity {
             // Automotive relies on a different theme. Apply before calling super so that
             // fragments are restored properly on configuration changes.
             setTheme(R.style.CarSettings);
+        } else if (SettingsThemeHelper.isExpressiveTheme(this)) {
+            setTheme(R.style.Theme_PermissionController_Settings_Expressive_FilterTouches);
         }
         if (SdkLevel.isAtLeastV() && DeviceUtils.isHandheld(this)) {
             switch (getIntent().getAction()) {
@@ -218,6 +225,12 @@ public final class ManagePermissionsActivity extends SettingsActivity {
         String permissionName;
         switch (action) {
             case Intent.ACTION_MANAGE_PERMISSIONS:
+                PermissionControllerStatsLog.write(
+                        PERMISSION_MANAGER_PAGE_INTERACTION,
+                        sessionId,
+                        PERMISSION_MANAGER_PAGE_INTERACTION__ACTION__PERMISSION_MANAGER_OPENED,
+                        null
+                );
                 Bundle arguments = new Bundle();
                 arguments.putLong(EXTRA_SESSION_ID, sessionId);
                 if (DeviceUtils.isAuto(this)) {
@@ -455,7 +468,7 @@ public final class ManagePermissionsActivity extends SettingsActivity {
                     // On Wear, PrivacyDashboard and PermissionManager have different UI,
                     // PermissionController needs to add an extra in the intent to instruct
                     // HealthConnect how to differentiate.
-                    if (DeviceUtils.isWear(this) && Flags.replaceBodySensorPermissionEnabled()) {
+                    if (DeviceUtils.isWear(this) && SdkLevel.isAtLeastB()) {
                         Utils.navigateToWearHealthConnectSettingsPrivacyDashboard(this);
                     } else {
                         Utils.navigateToHealthConnectSettings(this);
@@ -542,6 +555,14 @@ public final class ManagePermissionsActivity extends SettingsActivity {
                             R.id.app_data_sharing_updates);
                 } else {
                     finishAfterTransition();
+                    return;
+                }
+            } break;
+
+            case Constants.ACTION_ADDITIONAL_PERMISSIONS: {
+                if (!DeviceUtils.isAuto(this) && !DeviceUtils.isTelevision(this)) {
+                    Bundle args = ManageCustomPermissionsFragment.createArgs(sessionId);
+                    setNavGraph(args, R.id.manage_custom);
                     return;
                 }
             } break;

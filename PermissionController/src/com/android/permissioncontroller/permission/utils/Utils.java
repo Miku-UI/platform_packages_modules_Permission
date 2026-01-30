@@ -115,7 +115,6 @@ import com.android.permissioncontroller.R;
 import com.android.permissioncontroller.permission.model.AppPermissionGroup;
 import com.android.permissioncontroller.permission.model.livedatatypes.LightAppPermGroup;
 import com.android.permissioncontroller.permission.model.livedatatypes.LightPackageInfo;
-import com.android.settingslib.widget.SettingsThemeHelper;
 
 import kotlin.Triple;
 
@@ -319,9 +318,13 @@ public final class Utils {
                 R.string.permgrouprequest_device_aware_notifications);
 
         PERM_GROUP_REQUEST_DETAIL_RES = new ArrayMap<>();
-        PERM_GROUP_REQUEST_DETAIL_RES.put(LOCATION, R.string.permgrouprequestdetail_location);
-        PERM_GROUP_REQUEST_DETAIL_RES.put(MICROPHONE, R.string.permgrouprequestdetail_microphone);
-        PERM_GROUP_REQUEST_DETAIL_RES.put(CAMERA, R.string.permgrouprequestdetail_camera);
+        // This string resource is non-empty in resources directory v36.1+, which is the version we
+        // start to show details for this permission group. SDK_INT_FULL doesn't exist until B, so
+        // check isAtLeastB first
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.BAKLAVA
+                && Build.VERSION.SDK_INT_FULL >= Build.VERSION_CODES_FULL.BAKLAVA_1) {
+            PERM_GROUP_REQUEST_DETAIL_RES.put(CONTACTS, R.string.permgrouprequestdetail_contacts);
+        }
 
         PERM_GROUP_BACKGROUND_REQUEST_RES = new ArrayMap<>();
         PERM_GROUP_BACKGROUND_REQUEST_RES
@@ -550,7 +553,7 @@ public final class Utils {
         if (group.equals(Manifest.permission_group.UNDEFINED)) {
             List<PermissionInfo> undefinedPerms = new ArrayList<>();
             for (PermissionInfo permissionInfo : installedRuntime) {
-                if (Flags.replaceBodySensorPermissionEnabled()
+                if (SdkLevel.isAtLeastB()
                     && (permissionInfo.name.equals(Manifest.permission.BODY_SENSORS) ||
                     permissionInfo.name.equals(Manifest.permission.BODY_SENSORS_BACKGROUND))) {
                     continue;
@@ -900,7 +903,7 @@ public final class Utils {
      * when the platform is T+, and the package has legacy storage access (i.e., either the package
      * has a targetSdk less than Q, or has a targetSdk equal to Q and has OPSTR_LEGACY_STORAGE).
      *
-     * TODO jaysullivan: This is always calling AppOpsManager; not taking advantage of LiveData
+     * NOTE: This is always calling AppOpsManager; not taking advantage of LiveData
      *
      * @param pkg The package to check
      */
@@ -1070,14 +1073,6 @@ public final class Utils {
     }
 
     /**
-     * Whether Expressive Design is enabled on this device.
-     */
-    public static boolean isExpressiveDesignEnabled(@NonNull Context context) {
-        return SdkLevel.isAtLeastB() && DeviceUtils.isHandheld()
-                && SettingsThemeHelper.isExpressiveTheme(context);
-    }
-
-    /**
      * Returns true if the group name passed is that of the Platform health group.
      * @param permGroupName name of the group that needs to be checked.
      */
@@ -1118,7 +1113,7 @@ public final class Utils {
         }
 
         // Only show Fitness&Wellness chip on Wear if the app is requesting system permissions.
-        if (Flags.replaceBodySensorPermissionEnabled()
+        if (SdkLevel.isAtLeastB()
                 && pm.hasSystemFeature(PackageManager.FEATURE_WATCH)) {
             Set<String> requestedPermissions = new HashSet<>(packageInfo.getRequestedPermissions());
             for (PermissionInfo permission : permissions) {
@@ -1172,10 +1167,10 @@ public final class Utils {
      * Returns true if the request is being made as the result of a split health permission from
      * BODY_SENSORS call.
      */
-    @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
+    @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.BAKLAVA)
     private static boolean isRequestFromSplitHealthPermission(LightPackageInfo packageInfo) {
         // Sdk check to make sure HealthConnectManager.isHealthPermission() is supported.
-        if (!SdkLevel.isAtLeastU() || !Flags.replaceBodySensorPermissionEnabled()) {
+        if (!SdkLevel.isAtLeastB()) {
             return false;
         }
 

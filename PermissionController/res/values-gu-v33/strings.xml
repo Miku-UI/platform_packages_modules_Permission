@@ -19,7 +19,7 @@
     <string name="role_dialer_request_description" msgid="6188305064871543419">"આ ઍપને તમને નોટિફિકેશન મોકલવાની મંજૂરી આપવામાં આવશે અને તમારા કૅમેરા, સંપર્કો, માઇક્રોફોન, ફોન અને SMSનો ઍક્સેસ આપવામાં આવશે."</string>
     <string name="role_sms_request_description" msgid="1506966389698625395">"આ ઍપને તમને નોટિફિકેશન મોકલવાની મંજૂરી આપવામાં આવશે અને તમારા કૅમેરા, સંપર્કો, ફાઇલો, માઇક્રોફોન, ફોન અને SMSનો ઍક્સેસ આપવામાં આવશે"</string>
     <string name="permission_description_summary_storage" msgid="1917071243213043858">"આ પરવાનગી ધરાવતી ઍપ આ ડિવાઇસ પરની બધી ફાઇલો ઍક્સેસ કરી શકે છે"</string>
-    <string name="work_policy_title" msgid="832967780713677409">"તમારી કાર્ય પૉલિસીની માહિતી"</string>
+    <string name="work_policy_title" msgid="832967780713677409">"તમારી ઑફિસની પૉલિસીની માહિતી"</string>
     <string name="work_policy_summary" msgid="3886113358084963931">"તમારા IT ઍડમિન દ્વારા મેનેજ કરવામાં આવતા સેટિંગ"</string>
     <string name="safety_center_entry_group_expand_action" msgid="5358289574941779652">"સૂચિ મોટી કરીને બતાવો"</string>
     <string name="safety_center_entry_group_collapse_action" msgid="1525710152244405656">"સૂચિ નાની કરો અને સેટિંગ છુપાવો"</string>
@@ -29,6 +29,7 @@
     <string name="safety_center_entry_content_description" msgid="3639565652938224321">"<xliff:g id="ENTRY_ITEM_TITLE">%1$s</xliff:g>. <xliff:g id="ENTRY_ITEM_SUMMARY">%2$s</xliff:g>"</string>
     <string name="safety_center_more_issues_card_title" msgid="7425844746197493312">"વધુ અલર્ટ"</string>
     <string name="safety_center_dismissed_issues_card_title" msgid="2340129842725145733">"છોડી દીધેલા અલર્ટ"</string>
+    <string name="safety_center_expressive_more_issues_collapse_title" msgid="4022284109267834224">"બંધ કરો"</string>
     <string name="safety_center_more_issues_card_expand_action" msgid="7109451851052272946">"{count,plural, =1{મોટું કરો અને વધુ એક અલર્ટ જુઓ}one{મોટું કરો અને વધુ # અલર્ટ જુઓ}other{મોટું કરો અને વધુ # અલર્ટ જુઓ}}"</string>
     <string name="safety_center_more_issues_card_collapse_action" msgid="7485597582198474637">"નાનું કરો"</string>
     <string name="safety_center_issue_card_prefix_content_description" msgid="1447445289637043544">"અલર્ટ. <xliff:g id="ISSUE_CARD_TITLE">%1$s</xliff:g>"</string>

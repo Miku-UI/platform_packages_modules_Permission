@@ -163,7 +163,7 @@
     <string name="permission_usage_bar_chart_title_last_15_minutes" msgid="2743143675412824819">"Utilização das autorizações nos últimos 15 minutos"</string>
     <string name="permission_usage_bar_chart_title_last_minute" msgid="820450867183487607">"Utilização das autorizações no último minuto"</string>
     <string name="permission_usage_preference_summary_not_used_in_past_n_days" msgid="4771868094611359651">"{count,plural, =1{Não usada há # dia}many{Não usada há # dias}other{Não usada há # dias}}"</string>
-    <string name="permission_usage_preference_summary_not_used_in_past_n_hours" msgid="3828973177433435742">"{count,plural, =1{Não usada há # hora}many{Não usada há # horas}other{Não usada há # horas}}"</string>
+    <string name="permission_usage_preference_summary_not_used_in_past_n_hours" msgid="3828973177433435742">"{count,plural, =1{Não usado há # hora}many{Não usado há # horas}other{Não usado há # horas}}"</string>
     <string name="permission_usage_preference_label" msgid="8343167938128676378">"{count,plural, =1{Utilização: 1 app}many{Utilização: # apps}other{Utilização: # apps}}"</string>
     <string name="permission_usage_view_details" msgid="6675335735468752787">"Ver tudo no painel de controlo"</string>
     <string name="app_permission_usage_filter_label" msgid="7182861154638631550">"Filtrado por: <xliff:g id="PERM">%1$s</xliff:g>"</string>
@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"App de assistente digital predefinida"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"App assistente digital"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"As apps de assistência podem ser-lhe úteis com base em informações do ecrã que está a ver. Algumas apps são compatíveis com serviços de iniciação e de entrada de texto por voz para oferecer assistência integrada."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"Recomendações da <xliff:g id="OEM_NAME">%s</xliff:g>"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"App navegador predefinida"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"App de navegador"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"Apps que lhe dão acesso à Internet e apresentam links em que pode tocar."</string>
@@ -403,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"Definir a app <xliff:g id="APP_NAME">%1$s</xliff:g> como a sua app de navegação predefinida?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"Não são necessárias autorizações"</string>
     <string name="role_watch_description" msgid="267003778693177779">"A app <xliff:g id="APP_NAME">%1$s</xliff:g> poderá interagir com as suas notificações e aceder às autorizações do Telefone, SMS, Contactos e Calendário."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"A app <xliff:g id="APP_NAME">%1$s</xliff:g> poderá interagir com as suas notificações e fazer stream das suas apps para o dispositivo ligado."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"Este serviço partilha as fotos, o conteúdo multimédia e as notificações do seu telemóvel com outros dispositivos."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"App de notas predefinida"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"App de notas"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"Apps que lhe permitem tirar notas no seu dispositivo"</string>
@@ -440,7 +439,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Abertura de links"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"Predefinição para o trabalho"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"Predefinição para espaço privado"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"Otimizadas para o dispositivo"</string>
     <string name="default_app_others" msgid="7793029848126079876">"Outras"</string>
     <string name="default_app_none" msgid="9084592086808194457">"Nenhuma"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(Predefinição do sistema)"</string>
@@ -662,7 +660,7 @@
     <string name="data_sharing_updates_title" msgid="7996933386875213859">"Atualizações da partilha de dados para a localização"</string>
     <string name="data_sharing_updates_summary" msgid="764113985772233889">"Reveja apps que mudaram a forma de partilhar os seus dados de localização"</string>
     <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"Estas apps mudaram a forma de partilhar os seus dados de localização. É possível que não os tenham partilhado antes ou que passem a partilhá-los agora para fins de publicidade ou marketing."</string>
-    <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Os programadores destas apps deram informações sobre as respetivas práticas de partilha de dados a uma loja de apps. Podem atualizá-las ao longo do tempo.\n\nAs práticas de partilha de dados podem variar consoante a versão da app, a utilização, a região e a idade."</string>
+    <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Os programadores destas apps cederam informações sobre as respetivas práticas de partilha de dados a uma loja de apps. Podem ir atualizando as mesmas.\n\nAs práticas de partilha de dados podem variar consoante a versão da app, a utilização, a região e a idade."</string>
     <string name="learn_about_data_sharing" msgid="4200480587079488045">"Saiba mais sobre a partilha de dados"</string>
     <string name="shares_location_with_third_parties" msgid="2278051743742057767">"Os seus dados de localização são agora partilhados com terceiros"</string>
     <string name="shares_location_with_third_parties_for_advertising" msgid="1918588064014480513">"Os seus dados de localização são agora partilhados com terceiros para fins de publicidade ou marketing"</string>
@@ -703,4 +701,22 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"Verifique o seu telemóvel"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"Não foi possível ligar ao telemóvel"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"Tentar novamente?"</string>
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"Agentes"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"Agentes que podem aceder a informações ou realizar ações em apps"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"Agentes"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"Faça a gestão do acesso dos agentes neste dispositivo"</string>
+    <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"Nenhuma app de agente disponível"</string>
+    <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"Instale uma app de agente no dispositivo para ativar esta funcionalidade"</string>
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"Acesso a apps"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"Apps e definições a que este agente pode aceder para ver informações e realizar ações por si"</string>
+    <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"Não existem apps disponíveis para o acesso à app <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"Sistema"</string>
+    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Apps"</string>
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"Acesso de agentes"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agentes que podem aceder a informações e realizar ações por si nesta app"</string>
+    <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Definições do dispositivo"</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Permitir que <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> seja um agente de <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Este agente vai poder aceder a <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> para ver informações e tomar medidas por si"</string>
+    <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Permitir"</string>
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Não permitir"</string>
 </resources>

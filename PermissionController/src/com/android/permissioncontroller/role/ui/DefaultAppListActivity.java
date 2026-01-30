@@ -22,7 +22,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.android.permissioncontroller.DeviceUtils;
-import com.android.permissioncontroller.R;
+import com.android.permissioncontroller.common.ui.SettingsActivity;
 import com.android.permissioncontroller.role.ui.auto.AutoDefaultAppListFragment;
 import com.android.permissioncontroller.role.ui.handheld.HandheldDefaultAppListFragment;
 import com.android.permissioncontroller.role.ui.wear.WearDefaultAppListFragment;
@@ -34,12 +34,6 @@ public class DefaultAppListActivity extends SettingsActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        if (DeviceUtils.isAuto(this)) {
-            // Automotive relies on a different theme. Apply before calling super so that
-            // fragments are restored properly on configuration changes.
-            setTheme(R.style.CarSettings);
-        }
-
         super.onCreate(savedInstanceState);
 
         if (savedInstanceState == null) {

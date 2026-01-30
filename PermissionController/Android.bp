@@ -92,6 +92,7 @@ android_library {
     kotlin_lang_version: "1.9",
     kotlincflags: [
         "-Werror",
+        "-Xsuppress-version-warnings",
         "-opt-in=kotlinx.coroutines.DelicateCoroutinesApi",
         "-Xjvm-default=all",
     ],
@@ -100,7 +101,6 @@ android_library {
         "android.car-stubs",
         "safety-center-annotations",
     ],
-
     static_libs: [
         "permissioncontroller-protos",
         "iconloader_sc_mainline_prod",
@@ -137,10 +137,14 @@ android_library {
         "SettingsLibCollapsingToolbarBaseActivity",
         "SettingsLibActivityEmbedding",
         "SettingsLibSettingsTheme",
+        "SettingsLibCategory",
+        "SettingsLibIntroPreference",
         "SettingsLibFooterPreference",
         "SettingsLibSelectorWithWidgetPreference",
+        "SettingsLibTopIntroPreference",
         "SettingsLibTwoTargetPreference",
         "SettingsLibIllustrationPreference",
+        "SettingsLibZeroStatePreference",
         "androidx.annotation_annotation",
         "permissioncontroller-statsd",
         "car-ui-lib",
@@ -153,7 +157,9 @@ android_library {
         "lottie",
         "safety-label",
         "role-controller",
+        "android.location.flags-aconfig-java-export",
         "android.permission.flags-aconfig-java-export",
+        "com.android.permissioncontroller.flags-aconfig-java",
         "android.xr.flags-aconfig-java-export",
         "com.android.permission.flags-aconfig-java-export",
         "androidx.compose.foundation_foundation",
@@ -164,7 +170,12 @@ android_library {
         "android.content.pm.flags-aconfig-java-export",
         "android.os.flags-aconfig-java-export",
         "wear-permission-components",
+        "androidx.appsearch_appsearch",
+        "androidx.appsearch_appsearch-builtin-types",
+        "appfunctions-schema",
     ],
+
+    optional_uses_libs: ["com.android.extensions.appfunctions"],
 
     lint: {
         error_checks: ["Recycle"],
@@ -186,13 +197,19 @@ android_app {
     // boundaries, which may be unsafe because PermissionController is also shipped as a standalone
     // artifact. See also b/209458854.
     sdk_version: "system_current",
-    min_sdk_version: "30",
+    min_sdk_version: select(release_flag("RELEASE_DEPRECATE_MAINLINE_R_SUPPORT"), {
+        true: "31",
+        default: "30",
+    }),
     updatable: true,
     privileged: true,
     certificate: "platform",
     use_resource_processor: true,
     rename_resources_package: false,
     privapp_allowlist: ":privapp_allowlist_com.android.permissioncontroller.xml",
+    flags_packages: [
+        "com.android.permission.flags-aconfig",
+    ],
 
     static_libs: ["PermissionController-lib"],
 
@@ -208,5 +225,9 @@ android_app {
     apex_available: [
         "//apex_available:platform",
         "com.android.permission",
+    ],
+    licenses: [
+        "packages_modules_Permission_PermissionController_license",
+        "opensourcerequest",
     ],
 }

@@ -260,7 +260,7 @@
     <string name="ask_header" msgid="2633816846459944376">"Pyet çdo herë"</string>
     <string name="denied_header" msgid="903209608358177654">"Nuk lejohet"</string>
     <string name="permission_group_name_with_device_name" msgid="8798741850536024820">"<xliff:g id="PERM_GROUP_NAME">%1$s</xliff:g> në <xliff:g id="DEVICE_NAME">%2$s</xliff:g>"</string>
-    <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Shiko më shumë aplikacione me qasje tek të gjithë skedarët"</string>
+    <string name="storage_footer_hyperlink_text" msgid="8873343987957834810">"Shiko më shumë aplikacione me qasje te të gjithë skedarët"</string>
     <string name="days" msgid="609563020985571393">"{count,plural, =1{1 ditë}other{# ditë}}"</string>
     <string name="hours" msgid="7302866489666950038">"{count,plural, =1{# orë}other{# orë}}"</string>
     <string name="minutes" msgid="4868414855445375753">"{count,plural, =1{# minutë}other{# minuta}}"</string>
@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"Apl. i parazgjedhur i asistentit dixhital"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"Aplikacioni i asistentit dixhital"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"Aplikacionet e asistentit të ndihmojnë bazuar në informacionet nga ekrani që je duke shikuar. Disa aplikacione mbështesin shërbimet e nisësit dhe të hyrjes me zë për të të siguruar një ndihmë të integruar."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"Rekomanduar nga <xliff:g id="OEM_NAME">%s</xliff:g>"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"Aplikacioni i parazgjedhur i shfletuesit"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"Aplikacioni i shfletuesit"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"Aplikacionet që të japin qasje në internet dhe që shfaqin lidhjet që troket ti"</string>
@@ -403,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"Të caktohet <xliff:g id="APP_NAME">%1$s</xliff:g> si aplikacioni i parazgjedhur i navigimit?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"Nuk nevojitet asnjë leje"</string>
     <string name="role_watch_description" msgid="267003778693177779">"<xliff:g id="APP_NAME">%1$s</xliff:g> do të lejohet të ndërveprojë me njoftimet e tua dhe të ketë qasje te lejet e \"Telefonit\", \"SMS-ve\", \"Kontakteve\" dhe \"Kalendarit\"."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"<xliff:g id="APP_NAME">%1$s</xliff:g> do të lejohet të ndërveprojë me njoftimet e tua dhe të transmetojë aplikacionet në pajisjen e lidhur."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"Ky shërbim ndan fotografitë, median dhe njoftimet nga telefoni yt me pajisje të tjera."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"Shënimet; apl. i parazgjedhur"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"Aplikacioni për shënime"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"Aplikacione që të lejojnë të mbash shënime në pajisjen tënde"</string>
@@ -440,7 +439,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Hapja e lidhjeve"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"Të parazgjedhura për punën"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"Të parazgjedhurat për hapësirën private"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"Optimizuar për pajisjen"</string>
     <string name="default_app_others" msgid="7793029848126079876">"Të tjera"</string>
     <string name="default_app_none" msgid="9084592086808194457">"Asnjë"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(Parazgjedhja e sistemit)"</string>
@@ -703,4 +701,22 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"Kontrollo telefonin"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"Telefoni nuk mund të arrihej"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"Të riprovohet?"</string>
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"Agjentët"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"Agjentët që mund të kenë qasje në informacione dhe të ndërmarrin veprime në aplikacione"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"Agjentët"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"Menaxho qasjen për agjentët në këtë pajisje"</string>
+    <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"Nuk ofrohet asnjë aplikacion agjenti"</string>
+    <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"Instalo një aplikacion agjenti në pajisjen tënde për ta aktivizuar këtë veçori"</string>
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"Qasja e aplikacionit"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"Aplikacionet dhe cilësimet ku mund të qaset ky agjent për të marrë informacione dhe për të ndërmarrë veprime për ty"</string>
+    <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"Nuk ofrohet asnjë aplikacion për qasjen e <xliff:g id="APP_NAME">%1$s</xliff:g>"</string>
+    <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"Sistemi"</string>
+    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Aplikacionet"</string>
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"Qasja e agjentit"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"Agjentët që mund të kenë qasje në informacione dhe të ndërmarrin veprime për ty në këtë aplikacion"</string>
+    <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Cilësimet e pajisjes"</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"Të lejohet që <xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> të jetë një agjent për <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Ky agjent do të mund të ketë qasje te <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> për të marrë informacione dhe për të ndërmarrë veprime për ty"</string>
+    <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Lejo"</string>
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Mos lejo"</string>
 </resources>

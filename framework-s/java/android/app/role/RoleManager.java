@@ -16,6 +16,8 @@
 
 package android.app.role;
 
+import static android.annotation.RestrictedForEnvironment.ENVIRONMENT_SDK_RUNTIME;
+
 import android.Manifest;
 import android.annotation.CallbackExecutor;
 import android.annotation.FlaggedApi;
@@ -23,6 +25,7 @@ import android.annotation.IntDef;
 import android.annotation.NonNull;
 import android.annotation.Nullable;
 import android.annotation.RequiresPermission;
+import android.annotation.RestrictedForEnvironment;
 import android.annotation.SuppressLint;
 import android.annotation.SystemApi;
 import android.annotation.SystemService;
@@ -78,6 +81,8 @@ import java.util.function.Consumer;
  * Upon becoming a role holder, the application may be granted certain privileges that are role
  * specific. When the application loses its role, these privileges will also be revoked.
  */
+@RestrictedForEnvironment(
+        environments = ENVIRONMENT_SDK_RUNTIME, from = Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
 @SystemService(Context.ROLE_SERVICE)
 public final class RoleManager {
     /**
@@ -172,6 +177,15 @@ public final class RoleManager {
     public static final String ROLE_SYSTEM_SUPERVISION = "android.app.role.SYSTEM_SUPERVISION";
 
     /**
+     * The name of the supervision role.
+     *
+     * @hide
+     */
+    @FlaggedApi(Flags.FLAG_SUPERVISION_ROLE_ENABLED)
+    @SystemApi
+    public static final String ROLE_SUPERVISION = "android.app.role.SUPERVISION";
+
+    /**
      * The name of the system activity recognizer role.
      *
      * @hide
@@ -203,6 +217,22 @@ public final class RoleManager {
             "android.app.role.FINANCED_DEVICE_KIOSK";
 
     /**
+     * The name of the system financed device controller role.
+     *
+     * This role grants the device lock controller a set of permissions that allows it
+     * to manage the device state for financed devices. When a creditor app that holds the
+     * {@link #ROLE_FINANCED_DEVICE_KIOSK} role invokes the lock or unlock command on a
+     * financed device, it is through the device lock controller that the accompanying policies
+     * are enforced.
+     *
+     * @hide
+     */
+    @SystemApi
+    @FlaggedApi(com.android.permission.flags.Flags.FLAG_SYSTEM_FINANCED_DEVICE_CONTROLLER)
+    public static final String ROLE_SYSTEM_FINANCED_DEVICE_CONTROLLER =
+            "android.app.role.SYSTEM_FINANCED_DEVICE_CONTROLLER";
+
+    /**
      * The name of the system call streaming role.
      *
      * @hide
@@ -220,6 +250,15 @@ public final class RoleManager {
     @SystemApi
     public static final String ROLE_RESERVED_FOR_TESTING_PROFILE_GROUP_EXCLUSIVITY =
             "android.app.role.RESERVED_FOR_TESTING_PROFILE_GROUP_EXCLUSIVITY";
+
+    /**
+     * The name of the content restriction role.
+     *
+     * This role enables the ability to view and restrict content for the user.
+     *
+     */
+    @FlaggedApi(Flags.FLAG_CONTENT_RESTRICTION_ROLE_ENABLED)
+    public static final String ROLE_CONTENT_RESTRICTION = "android.app.role.CONTENT_RESTRICTION";
 
     /**
      * @hide
@@ -371,7 +410,8 @@ public final class RoleManager {
      * Get package names of the applications holding the role.
      * <p>
      * <strong>Note:</strong> Using this API requires holding
-     * {@code android.permission.MANAGE_ROLE_HOLDERS}.
+     * {@code android.permission.MANAGE_ROLE_HOLDERS} or
+     * {@code android.permission.GET_ROLE_HOLDERS}.
      *
      * @param roleName the name of the role to get the role holder for
      *
@@ -382,7 +422,8 @@ public final class RoleManager {
      * @hide
      */
     @NonNull
-    @RequiresPermission(Manifest.permission.MANAGE_ROLE_HOLDERS)
+    @RequiresPermission(anyOf = {Manifest.permission.MANAGE_ROLE_HOLDERS,
+            Manifest.permission.GET_ROLE_HOLDERS})
     @SystemApi
     @UserHandleAware(enabledSinceTargetSdkVersion = Build.VERSION_CODES.VANILLA_ICE_CREAM)
     public List<String> getRoleHolders(@NonNull String roleName) {
@@ -393,7 +434,9 @@ public final class RoleManager {
      * Get package names of the applications holding the role.
      * <p>
      * <strong>Note:</strong> Using this API requires holding
-     * {@code android.permission.MANAGE_ROLE_HOLDERS} and if the user id is not the current user
+     * {@code android.permission.MANAGE_ROLE_HOLDERS} or
+     * {@code android.permission.GET_ROLE_HOLDERS}. If the user id is not the
+     * current user, it also requires holding
      * {@code android.permission.INTERACT_ACROSS_USERS_FULL}.
      *
      * @param roleName the name of the role to get the role holder for
@@ -408,7 +451,8 @@ public final class RoleManager {
      * @hide
      */
     @NonNull
-    @RequiresPermission(Manifest.permission.MANAGE_ROLE_HOLDERS)
+    @RequiresPermission(anyOf = {Manifest.permission.MANAGE_ROLE_HOLDERS,
+            Manifest.permission.GET_ROLE_HOLDERS})
     @SystemApi
     public List<String> getRoleHoldersAsUser(@NonNull String roleName, @NonNull UserHandle user) {
         Preconditions.checkStringNotEmpty(roleName, "roleName cannot be null or empty");

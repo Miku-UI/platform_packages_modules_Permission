@@ -56,7 +56,7 @@
     <string name="grant_dialog_button_change_to_precise_location" msgid="3273115879467236033">"Нақты локацияға ауысу"</string>
     <string name="grant_dialog_button_keey_approximate_location" msgid="438025182769080011">"Болжалды локацияны қалдыру"</string>
     <string name="grant_dialog_button_allow_one_time" msgid="2618088516449706391">"Тек осы жолы"</string>
-    <string name="grant_dialog_button_allow_background" msgid="8236044729434367833">"Біржола рұқсат ету"</string>
+    <string name="grant_dialog_button_allow_background" msgid="8236044729434367833">"Біржола рұқсат беру"</string>
     <string name="grant_dialog_button_allow_all_files" msgid="4955436994954829894">"Барлық файлдарды басқаруға рұқсат беру"</string>
     <string name="grant_dialog_button_allow_media_only" msgid="4832877658422573832">"Медиафайлдарды пайдалануға рұқсат беру"</string>
     <string name="app_permissions_breadcrumb" msgid="5136969550489411650">"Қолданбалар"</string>
@@ -200,8 +200,8 @@
     <string name="app_permission_title" msgid="2090897901051370711">"<xliff:g id="PERM">%1$s</xliff:g> рұқсаты"</string>
     <string name="app_permission_header" msgid="2951363137032603806">"<xliff:g id="PERM">%1$s</xliff:g>: осы қолданбаның рұқсаты"</string>
     <string name="app_permission_header_with_device_name" msgid="7193042925656173271">"Құрылғыдағы (<xliff:g id="DEVICE_NAME">%2$s</xliff:g>) осы қолданбаның рұқсаты: <xliff:g id="PERM">%1$s</xliff:g>"</string>
-    <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"Барлық <xliff:g id="APP">%1$s</xliff:g> рұқсаттарын көру"</string>
-    <string name="app_permission_footer_permission_apps_link" msgid="3941988129992794327">"Осы рұқсатқа ие барлық қолданбаларды көру"</string>
+    <string name="app_permission_footer_app_permissions_link" msgid="4926890342636587393">"Барлық <xliff:g id="APP">%1$s</xliff:g> рұқсатын көру"</string>
+    <string name="app_permission_footer_permission_apps_link" msgid="3941988129992794327">"Осы рұқсатқа ие барлық қолданбаны көру"</string>
     <string name="app_permission_info_button" msgid="8973692370208562556">"Ақпарат"</string>
     <string name="app_permission_settings_button" msgid="4582916817451973752">"Параметрлер"</string>
     <string name="assistant_mic_label" msgid="1011432357152323896">"Assistant микрофонының пайдаланылуын көрсету"</string>
@@ -254,7 +254,7 @@
     <string name="app_permission_never_accessed_denied_summary" msgid="6596000497490905146">"Тыйым салынған/Ешқашан пайдаланбаған"</string>
     <string name="allowed_header" msgid="7769277978004790414">"Рұқсат берілгендер"</string>
     <string name="allowed_always_header" msgid="6455903312589013545">"Біржола рұқсат берілген"</string>
-    <string name="allowed_foreground_header" msgid="6845655788447833353">"Пайдаланғанда ғана рұқсат берілгендер"</string>
+    <string name="allowed_foreground_header" msgid="6845655788447833353">"Пайдаланғанда ғана рұқсат берілген"</string>
     <string name="allowed_storage_scoped" msgid="5383645873719086975">"Тек мультимедианы пайдалана алатын қолданбалар"</string>
     <string name="allowed_storage_full" msgid="5356699280625693530">"Барлық файлдарды басқара алатын қолданбалар"</string>
     <string name="ask_header" msgid="2633816846459944376">"Әрдайым сұрау"</string>
@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"Әдепкі цифрлық көмекші қолданбасы"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"Цифрлық көмекші қолданбасы"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"Көмекші қолданбалар ашық тұрған экрандағы ақпарат бойынша көмек бере алады. Кейбір қолданбалар қосымша көмек ретінде іске қосу құралын да, дауыспен енгізу қызметтерін де пайдаланады."</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"<xliff:g id="OEM_NAME">%s</xliff:g> ұсынған"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"Әдепкі браузер қолданбасы"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"Браузер қолданбасы"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"Интернетке кіруге мүмкіндік беретін және түртілген сілтемелерді көрсететін қолданбалар"</string>
@@ -403,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"<xliff:g id="APP_NAME">%1$s</xliff:g> қолданбасы әдепкі навигация қолданбасы етіп орнатылсын ба?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"Ешқандай рұқсат қажет емес."</string>
     <string name="role_watch_description" msgid="267003778693177779">"<xliff:g id="APP_NAME">%1$s</xliff:g> қолданбасы хабарландыруларды, телефонды, SMS, контактілерді және күнтізбе рұқсаттарын пайдалана алады."</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"<xliff:g id="APP_NAME">%1$s</xliff:g> қолданбасы хабарландыруларды пайдаланып, қолданбаларыңызды жалғанған құрылғыға трансляциялай алатын болады."</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"Бұл қызмет телефоныңыздағы фотосуреттерді, медиафайлдар мен хабарландыруларды басқа құрылғылармен бөліседі."</string>
     <string name="role_notes_label" msgid="7451627001058089536">"Әдепкі ескертпелер қолданбасы"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"Ескертпелер қолданбасы"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"Құрылғыда ескертпелер жазуға арналған қолданбалар"</string>
@@ -437,10 +436,9 @@
     <string name="default_apps" msgid="5119201969348748639">"Әдепкі қолданбалар"</string>
     <string name="no_default_apps" msgid="2593466527182950231">"Әдепкі қолданбалар жоқ"</string>
     <string name="default_apps_more" msgid="4078194675848858093">"Басқа да әдепкі қолданбалар"</string>
-    <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Сілтемелер ашу"</string>
+    <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"Сілтемелерді ашу"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"Жұмыс үшін әдепкі қолданба"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"Құпия кеңістікке арналған әдепкі қолданбалар"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"Құрылғы үшін оңтайландырылған"</string>
     <string name="default_app_others" msgid="7793029848126079876">"Басқа"</string>
     <string name="default_app_none" msgid="9084592086808194457">"Жоқ"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(жүйенің әдепкі қолданбасы)"</string>
@@ -568,12 +566,12 @@
     <string name="automotive_blocked_camera_title" msgid="6142362431548829416">"Камераны пайдалану рұқсаты өшірулі"</string>
     <string name="automotive_blocked_microphone_title" msgid="3956311098238620220">"Микрофон рұқсаты өшірулі"</string>
     <string name="automotive_blocked_location_title" msgid="6047574747593264689">"Локация рұқсаты өшірулі"</string>
-    <string name="automotive_blocked_infotainment_app_summary" msgid="8217099645064950860">"Ақпараттық-сауықтық қолданбалар"</string>
+    <string name="automotive_blocked_infotainment_app_summary" msgid="8217099645064950860">"Ақпарат және ойын-сауық қолданбалары"</string>
     <string name="automotive_blocked_required_app_summary" msgid="8591513745681168088">"Қажетті қолданбалар үшін"</string>
     <string name="automotive_required_app_title" msgid="2992168288249988735">"Осы қолданба қажет"</string>
     <string name="automotive_required_app_summary" msgid="6514902316658090465">"Осы қолданба көлік өндірушісі үшін қажет."</string>
     <string name="safety_center_dashboard_page_title" msgid="2810774008694315854">"Қауіпсіздік және құпиялық"</string>
-    <string name="safety_center_rescan_button" msgid="4517514567809409596">"Құрылғыны тексеру"</string>
+    <string name="safety_center_rescan_button" msgid="4517514567809409596">"Құрылғыны сканерлеу"</string>
     <string name="safety_center_issue_card_dismiss_button" msgid="5113965506144222402">"Жабу"</string>
     <string name="safety_center_issue_card_dismiss_confirmation_title" msgid="2734809473425036382">"Осы хабарландыруды жабу керек пе?"</string>
     <string name="safety_center_issue_card_dismiss_confirmation_message" msgid="3775418736671093563">"Қорғаныс деңгейін арттыру үшін қауіпсіздік пен құпиялық параметрлерін кез келген уақытта қарап шығыңыз."</string>
@@ -659,15 +657,15 @@
     <string name="app_permission_rationale_message" msgid="8511466916077100713">"Дерек қауіпсіздігі"</string>
     <string name="app_location_permission_rationale_title" msgid="925420340572401350">"Локация деректері жіберілуі мүмкін."</string>
     <string name="app_location_permission_rationale_subtitle" msgid="6986985722752868692">"Бұл қолданба локация деректеріңізді үшінші тараптармен бөлісе алатынын мәлімдеді."</string>
-    <string name="data_sharing_updates_title" msgid="7996933386875213859">"Локация деректерін бөлісу жаңартулары"</string>
+    <string name="data_sharing_updates_title" msgid="7996933386875213859">"Локация деректерін бөлісудегі өзгерістер"</string>
     <string name="data_sharing_updates_summary" msgid="764113985772233889">"Локация деректеріңізді бөлісу жолын өзгерткен қолданбаларды тексеру"</string>
     <string name="data_sharing_updates_subtitle" msgid="6311537708950632329">"Осы қолданбалар локация деректерін бөлісу жолын өзгертті. Олар деректерді бұрын бөліспей, енді жарнамалау не маркетинг үшін бөлісуі мүмкін."</string>
-    <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Бұл қолданбалардың әзірлеушілері App Store дүкенінде өздерінің деректерді бөлісу тәртібі туралы ақпарат берді. Олар уақыт өте келе оны жаңарта алады.\n\nДеректерді бөлісу тәртібі қолданбаңыздың нұсқасына, пайдаланылуына, аймағыңыз бен жасыңызға байланысты әртүрлі болуы мүмкін."</string>
+    <string name="data_sharing_updates_footer_message" msgid="1582711655172892107">"Бұл қолданбалардың әзірлеушілері қолданбалар дүкенінде өздерінің деректерді бөлісу тәртібі туралы ақпарат берді. Уақыт өте келе олар берген сол мәліметті жаңарта алады.\n\nДеректерді бөлісу тәртібі қолданбаңыздың нұсқасына, пайдаланылуына, аймағыңыз бен жасыңызға байланысты әртүрлі болуы мүмкін."</string>
     <string name="learn_about_data_sharing" msgid="4200480587079488045">"Деректерді бөлісу туралы ақпарат"</string>
     <string name="shares_location_with_third_parties" msgid="2278051743742057767">"Енді локация деректеріңіз үшінші тараптарға жіберіледі."</string>
     <string name="shares_location_with_third_parties_for_advertising" msgid="1918588064014480513">"Енді геодерегіңіз жарнамалау не маркетинг мақсатында үшінші тараптарға жіберіледі."</string>
     <string name="updated_in_last_days" msgid="8371811947153042322">"{count,plural, =0{Соңғы күні жаңартылды}=1{Соңғы күні жаңартылды}other{Соңғы # күн ішінде жаңартылды}}"</string>
-    <string name="no_updates_at_this_time" msgid="9031085635689982935">"Әзірге ешқандай жаңарту жоқ."</string>
+    <string name="no_updates_at_this_time" msgid="9031085635689982935">"Әзірге ешқандай өзгеріс жоқ"</string>
     <string name="safety_label_changes_notification_title" msgid="4479955083472203839">"Деректерді бөлісуге қатысты жаңалық"</string>
     <string name="safety_label_changes_notification_desc" msgid="7808764283266234675">"Кейбір қолданбалар локация деректеріңізді бөлісу жолын өзгертті."</string>
     <string name="safety_label_changes_gear_description" msgid="2655887555599138509">"Параметрлер"</string>
@@ -703,4 +701,22 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"Телефоныңызды тексеріңіз"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"Телефоныңызға қосылу мүмкін болмады."</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"Қайталау керек пе?"</string>
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"Агенттер"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"Қолданбаларда ақпаратты пайдалана алатын немесе әрекетке кірісе алатын агенттер"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"Агенттер"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"Бұл құрылғыдағы агенттердің рұқсатын басқару"</string>
+    <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"Ешқандай агент қолданбасы жоқ"</string>
+    <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"Бұл функцияны қосу үшін құрылғыңызға агент қолданбасын орнатыңыз"</string>
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"Қолданба рұқсаты"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"Ақпарат алу және сіздің орныңызға әрекетке кірісу үшін бұл агент кіре алатын қолданбалар мен параметрлер"</string>
+    <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"<xliff:g id="APP_NAME">%1$s</xliff:g> пайдалану рұқсаты бар ешқандай қолданба жоқ"</string>
+    <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"Жүйе"</string>
+    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"Қолданбалар"</string>
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"Агенттің кіру рұқсаты"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"Бұл қолданбада ақпаратты пайдаланып, сіздің орныңызға әрекетке кірісе алатын агенттер"</string>
+    <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"Құрылғы параметрлері"</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g> қолданбасына <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> агенті болуға рұқсат беру қажет пе?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"Бұл агент ақпарат алу және сізге қажетті әрекеттерді орындау үшін <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> пайдалана алады"</string>
+    <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"Рұқсат беру"</string>
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"Рұқсат бермеу"</string>
 </resources>

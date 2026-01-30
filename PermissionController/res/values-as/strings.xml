@@ -99,8 +99,8 @@
     <string name="deny_read_media_aural_warning" msgid="8928699919508646732">"এই এপ্‌টো Androidৰ এটা পুৰণা সংস্কৰণৰ বাবে ডিজাইন কৰা হৈছিল। আপুনি যদি সংগীত আৰু অন্য অডিঅ’লৈ এই এপ্‌টোৰ এক্সেছ অস্বীকাৰ কৰে, তেন্তে ফট’ আৰু ভিডিঅ’সমূহৰ এক্সেছো অস্বীকাৰ কৰা হ’ব।"</string>
     <string name="cdm_profile_revoke_warning" msgid="4443893270719106700">"আপুনি যদি এই অনুমতি প্ৰদান নকৰে, তেন্তে এই এপ্‌টোৱে পৰিচালনা কৰা আপোনাৰ ডিভাইচৰ কিছুমান সুবিধাই বিচৰা ধৰণে কাম নকৰিবও পাৰে।"</string>
     <string name="permission_summary_enforced_by_policy" msgid="4443598170942950519">"নীতিৰ যোগেদি বলৱৎ কৰা"</string>
-    <string name="permission_summary_disabled_by_policy_background_only" msgid="221995005556362660">"নীতি অনুসৰি নেপথ্য়ৰ এক্সেছ অক্ষম কৰা হ’ল"</string>
-    <string name="permission_summary_enabled_by_policy_background_only" msgid="8287675974767104279">"নীতি অনুসৰি নেপথ্য়ৰ এক্সেছ সক্ষম কৰা হ’ল"</string>
+    <string name="permission_summary_disabled_by_policy_background_only" msgid="221995005556362660">"নীতি অনুসৰি নেপথ্যৰ এক্সেছ অক্ষম কৰা হ’ল"</string>
+    <string name="permission_summary_enabled_by_policy_background_only" msgid="8287675974767104279">"নীতি অনুসৰি নেপথ্যৰ এক্সেছ সক্ষম কৰা হ’ল"</string>
     <string name="permission_summary_enabled_by_policy_foreground_only" msgid="3844582916889767831">"নীতি অনুসৰি অগ্ৰভূমিৰ এক্সেছ সক্ষম কৰা হ’ল"</string>
     <string name="permission_summary_enforced_by_admin" msgid="822702574117248700">"প্ৰশাসকে নিয়ন্ত্ৰিত কৰা"</string>
     <string name="permission_summary_disabled_by_admin_background_only" msgid="3127091456731845646">"প্ৰশাসকে নেপথ্যৰ এক্সেছ অক্ষম কৰি ৰাখিছে"</string>
@@ -358,6 +358,7 @@
     <string name="role_assistant_label" msgid="4727586018198208128">"ডিফ’ল্ট ডিজিটেল সহায়ক এপ্‌"</string>
     <string name="role_assistant_short_label" msgid="3369003713187703399">"ডিজিটেল সহায়ক এপ্‌"</string>
     <string name="role_assistant_description" msgid="6622458130459922952">"আপুনি চাই থকা স্ক্ৰীনৰ তথ্যৰ ভিত্তিত সহায়ক এপে আপোনাক সহায় কৰিব পাৰে। কিছুমান এপে লঞ্চাৰ আৰু ধ্বনি ইনপুট দুয়োটা সেৱাই আগবঢ়াব পাৰে যাৰ দ্বাৰা আপুনি একীকৃত সহায় লাভ কৰিব পাৰে।"</string>
+    <string name="role_assistant_recommended_title" msgid="2093873159106905257">"<xliff:g id="OEM_NAME">%s</xliff:g>এ চুপাৰিছ কৰা"</string>
     <string name="role_browser_label" msgid="2877796144554070207">"ডিফ’ল্ট ব্ৰাউজাৰ এপ্"</string>
     <string name="role_browser_short_label" msgid="6745009127123292296">"ব্ৰাউজাৰ এপ্"</string>
     <string name="role_browser_description" msgid="3465253637499842671">"যিবোৰ এপে আপোনাক ইণ্টাৰনেট আৰু আপুনি টিপা ডিছপ্লে’ লিংকৰ এক্সেছ দিয়ে"</string>
@@ -403,8 +404,6 @@
     <string name="role_automotive_navigation_request_title" msgid="7525693151489384300">"<xliff:g id="APP_NAME">%1$s</xliff:g>ক আপোনাৰ ডিফ’ল্ট নেভিগেশ্বনৰ এপ্ হিচাপে ছেট কৰিবনে?"</string>
     <string name="role_automotive_navigation_request_description" msgid="7073023813249245540">"কোনো অনুমতিৰ প্ৰয়োজন নাই"</string>
     <string name="role_watch_description" msgid="267003778693177779">"<xliff:g id="APP_NAME">%1$s</xliff:g>ক আপোনাৰ জাননী ব্যৱহাৰ কৰিবলৈ আৰু আপোনাৰ ফ’ন, এছএমএছ, সম্পৰ্ক আৰু কেলেণ্ডাৰৰ অনুমতি এক্সেছ কৰিবলৈ দিয়া হ’ব।"</string>
-    <string name="role_app_streaming_description" msgid="7341638576226183992">"<xliff:g id="APP_NAME">%1$s</xliff:g>ক আপোনাৰ জাননী ব্যৱহাৰ কৰিবলৈ আৰু সংযুক্ত ডিভাইচলৈ আপোনাৰ এপ্‌বোৰ ষ্ট্ৰীম কৰিবলৈ দিয়া হ’ব।"</string>
-    <string name="role_companion_device_computer_description" msgid="416099879217066377">"এইটো সেৱাই আপোনাৰ ফট’, মিডিয়া আৰু আপোনাৰ ফ’নৰ পৰা অন্য ডিভাইচলৈ দিয়া জাননী শ্বেয়াৰ কৰে।"</string>
     <string name="role_notes_label" msgid="7451627001058089536">"ডিফ’ল্ট টোকা লোৱা এপ্‌"</string>
     <string name="role_notes_short_label" msgid="8796604147546125285">"টোকা লোৱা এপ্‌"</string>
     <string name="role_notes_description" msgid="8496852798616883551">"আপোনাক আপোনাৰ ডিভাইচত টোকা ল’বলৈ দিয়া এপ্‌সমূহ"</string>
@@ -440,7 +439,6 @@
     <string name="default_apps_manage_domain_urls" msgid="6775566451561036069">"লিংকসমূহ খুলি থকা হৈছে"</string>
     <string name="default_apps_for_work" msgid="4970308943596201811">"কৰ্মস্থানৰ বাবে ডিফ’ল্ট"</string>
     <string name="default_apps_for_private_profile" msgid="2022024112144880785">"প্ৰাইভেট স্পে’চৰ বাবে ডিফ’ল্ট"</string>
-    <string name="default_app_recommended" msgid="5669584821778942909">"ডিভাইচৰ বাবে অপ্টিমাইজ কৰা হৈছে"</string>
     <string name="default_app_others" msgid="7793029848126079876">"অন্য"</string>
     <string name="default_app_none" msgid="9084592086808194457">"নাই"</string>
     <string name="default_app_system_default" msgid="6218386768175513760">"(ছিষ্টেম ডিফ\'ল্ট)"</string>
@@ -679,7 +677,7 @@
     <string name="enhanced_confirmation_dialog_title" msgid="7562437438040966351">"প্ৰতিবন্ধিত ছেটিং"</string>
     <string name="enhanced_confirmation_dialog_desc" msgid="5921240234843839219">"আপোনাৰ সুৰক্ষাৰ বাবে, এই ছেটিংটো বৰ্তমান উপলব্ধ নহয়।"</string>
     <string name="enhanced_confirmation_phone_state_dialog_title" msgid="5054064107559019689">"কলৰ সময়ত কাৰ্য সম্পূৰ্ণ কৰিব নোৱাৰি"</string>
-    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"আপোনাৰ ডিভাইচ আৰু ডেটা সুৰক্ষিত কৰিবলৈ এই ছেটিংটো অৱৰোধ কৰা হৈছে।<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
+    <string name="enhanced_confirmation_phone_state_dialog_desc" msgid="3803423079498712549">"আপোনাৰ ডিভাইচ আৰু ডেটা সুৰক্ষিত কৰিবলৈ এই ছেটিং অৱৰোধ কৰা হৈছে।<xliff:g id="SCAM_USE_SETTING_DESCRIPTION">%1$s</xliff:g>"</string>
     <string name="enhanced_confirmation_phone_state_dialog_install_desc" msgid="6400007048943674066">"<xliff:g id="EMPTY_LINE">
 
 </xliff:g>স্কেমাৰসকলে আপোনাক এটা নতুন উৎসৰ পৰা অজ্ঞাত এপ্‌সমূহ ইনষ্টল কৰিবলৈ কৈ ক্ষতিকাৰক এপ্‌সমূহ ইনষ্টল কৰিবলৈ চেষ্টা কৰিব পাৰে।"</string>
@@ -703,4 +701,22 @@
     <string name="wear_check_your_phone_title" msgid="7957291983474981420">"আপোনাৰ ফ’নটো চাওক"</string>
     <string name="wear_phone_connection_error" msgid="8934350845737930783">"আপোনাৰ ফ’নটোৰ সৈতে সংযোগ কৰিব পৰা নগ’ল"</string>
     <string name="wear_phone_connection_should_retry" msgid="2835355845567088003">"পুনৰ চেষ্টা কৰিবনে?"</string>
+    <string name="app_function_access_settings_title" msgid="8891907044622237648">"এজেণ্টসকল"</string>
+    <string name="app_function_access_settings_summary" msgid="8574075661031712914">"এপ্‌সমূহত তথ্য এক্সেছ কৰিব আৰু কাৰ্যব্যৱস্থা গ্ৰহণ কৰিব পৰা এজেণ্টসকল"</string>
+    <string name="app_function_agent_list_title" msgid="5292351554854465261">"এজেণ্টসকল"</string>
+    <string name="app_function_agent_list_summary" msgid="5591295514604863634">"এই ডিভাইচটোত এজেণ্টসকলৰ বাবে এক্সেছ পৰিচালনা কৰক"</string>
+    <string name="app_function_agent_list_empty_title" msgid="397515613920663055">"কোনো এজেণ্ট এপ্‌ উপলব্ধ নহয়"</string>
+    <string name="app_function_agent_list_empty_summary" msgid="610653760323174019">"এই সুবিধাটো সক্ষম কৰিবলৈ আপোনাৰ ডিভাইচত এটা এজেণ্ট এপ্‌ ইনষ্টল কৰক"</string>
+    <string name="app_function_agent_access_title" msgid="2066670300909436012">"এপৰ এক্সেছ"</string>
+    <string name="app_function_agent_access_summary" msgid="6732843077882189740">"এই এজেণ্টে তথ্য লাভ কৰিবলৈ আৰু আপোনাৰ বাবে ব্যৱস্থা গ্ৰহণ কৰিবলৈ এক্সেছ কৰিব পৰা এপ্‌ আৰু ছেটিংসমূহ"</string>
+    <string name="app_function_agent_access_app_targets_empty_title" msgid="774337187158063143">"<xliff:g id="APP_NAME">%1$s</xliff:g>ৰ এক্সেছৰ বাবে কোনো এপ্‌ উপলব্ধ নহয়"</string>
+    <string name="app_function_agent_access_system_targets_category_title" msgid="7563475048220758703">"ছিষ্টেম"</string>
+    <string name="app_function_agent_access_app_targets_category_title" msgid="620431387701237004">"এপ্‌সমূহ"</string>
+    <string name="app_function_target_access_title" msgid="7415628605578155761">"এজেণ্টৰ এক্সেছ"</string>
+    <string name="app_function_target_access_summary" msgid="6099120829640806490">"এই এপ্‌টোত তথ্য এক্সেছ কৰিব পৰা আৰু আপোনাৰ বাবে কাৰ্যব্যৱস্থা গ্ৰহণ কৰিব পৰা এজেণ্টসকল"</string>
+    <string name="app_function_device_settings_target_title" msgid="7310525289514611525">"ডিভাইচৰ ছেটিং"</string>
+    <string name="request_app_function_access_dialog_title" msgid="877934835928912474">"<xliff:g id="AGENT_APP_NAME">%1$s</xliff:g>ক <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g>ৰ বাবে এজেণ্ট হ’বলৈ অনুমতি দিবনে?"</string>
+    <string name="request_app_function_access_dialog_description" msgid="155777384496379754">"এই এজেণ্টগৰাকীয়ে তথ্য পাবলৈ আৰু আপোনাৰ বাবে কাৰ্য কৰিবলৈ <xliff:g id="TARGET_APP_NAME">%2$s</xliff:g> এক্সেছ কৰিব পাৰিব"</string>
+    <string name="request_app_function_dialog_button_allow" msgid="7758794243635329183">"অনুমতি দিয়ক"</string>
+    <string name="request_app_function_dialog_button_dont_allow" msgid="7657036841986717007">"অনুমতি নিদিব"</string>
 </resources>

@@ -40,6 +40,7 @@ import android.content.Intent
 import android.content.Intent.ACTION_MAIN
 import android.content.Intent.CATEGORY_INFO
 import android.content.Intent.CATEGORY_LAUNCHER
+import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.content.pm.PackageManager.FLAG_PERMISSION_AUTO_REVOKED
 import android.content.pm.PackageManager.FLAG_PERMISSION_ONE_TIME
@@ -469,6 +470,17 @@ object KotlinUtils {
     }
 
     /**
+     * Returns the package name for the Settings app.
+     *
+     * @param pm The PackageManager
+     * @return The package name for the Settings app, or a fallback if not found.
+     */
+    fun getSettingsPackageName(pm: PackageManager): String {
+       return getPackageNameForIntent(pm, Settings.ACTION_SETTINGS)
+            ?: Constants.SETTINGS_PACKAGE_NAME_FALLBACK
+    }
+
+    /**
      * Get the settings icon
      *
      * @param app The current application
@@ -477,9 +489,7 @@ object KotlinUtils {
      * @return Bitmap of the setting's icon, or null
      */
     fun getSettingsIcon(app: Application, user: UserHandle, pm: PackageManager): Bitmap? {
-        val settingsPackageName =
-            getPackageNameForIntent(pm, Settings.ACTION_SETTINGS)
-                ?: Constants.SETTINGS_PACKAGE_NAME_FALLBACK
+        val settingsPackageName = getSettingsPackageName(pm)
         return getBadgedPackageIconBitmap(app, user, settingsPackageName)
     }
 
@@ -1144,7 +1154,7 @@ object KotlinUtils {
                 group.specialFixedStorageGrant,
             )
 
-        if (wasOneTime && !anyPermsOfPackageOneTimeGranted(app, newGroup.packageInfo, newGroup)) {
+        if (wasOneTime && !anyPermsOfPackageOneTimeGranted(app, newGroup.packageInfo)) {
             // Create a new context with the given deviceId so that permission updates will be bound
             // to the device
             val context = ContextCompat.createDeviceContext(app.applicationContext, deviceId)
@@ -1189,30 +1199,24 @@ object KotlinUtils {
      *
      * @param app The current application
      * @param packageInfo The packageInfo we wish to examine
-     * @param group Optional, the current app permission group we are examining
      * @return true if any permission in the package is granted for one time, false otherwise
      */
     @Suppress("MissingPermission")
     private fun anyPermsOfPackageOneTimeGranted(
         app: Application,
         packageInfo: LightPackageInfo,
-        group: LightAppPermGroup? = null,
     ): Boolean {
-        val user = group?.userHandle ?: UserHandle.getUserHandleForUid(packageInfo.uid)
-        if (group?.isOneTime == true) {
-            return true
-        }
-        for ((idx, permName) in packageInfo.requestedPermissions.withIndex()) {
-            if (permName in group?.permissions ?: emptyMap()) {
+        val user = UserHandle.getUserHandleForUid(packageInfo.uid)
+        for ((index, permName) in packageInfo.requestedPermissions.withIndex()) {
+            if ((packageInfo.requestedPermissionsFlags[index] and
+                        PackageInfo.REQUESTED_PERMISSION_GRANTED) == 0) {
                 continue
             }
             val flags =
-                app.packageManager.getPermissionFlags(permName, packageInfo.packageName, user) and
-                    FLAG_PERMISSION_ONE_TIME
-            val granted =
-                packageInfo.requestedPermissionsFlags[idx] == PackageManager.PERMISSION_GRANTED &&
-                    (flags and FLAG_PERMISSION_REVOKED_COMPAT) == 0
-            if (granted && (flags and FLAG_PERMISSION_ONE_TIME) != 0) {
+                app.packageManager.getPermissionFlags(permName, packageInfo.packageName, user)
+            val isGrantedOneTime = (flags and FLAG_PERMISSION_REVOKED_COMPAT) == 0 &&
+                    (flags and FLAG_PERMISSION_ONE_TIME) != 0
+            if (isGrantedOneTime) {
                 return true
             }
         }
